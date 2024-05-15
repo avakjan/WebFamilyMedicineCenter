@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <app-header></app-header>
+        <div class="upcomingVisits-container">
+            <h2>Upcoming visits</h2>
+            <div class="visits-grid">
+                @for (upcomingVisit of upcomingVisits; track upcomingVisit) {
+                    <div class="upcomingVisit">
+                        <div *ngIf="upcomingVisit.isOnline; else offlineStatus"><b>Online visit</b></div>
+                        <ng-template #offlineStatus><div><b>Visit</b></div></ng-template> 
+                        <div *ngIf="upcomingVisit.description != '' "><b>Descripton: </b>{{upcomingVisit.description}}</div>
+                        <div><b>Medical center: </b>{{upcomingVisit.familyCenterName}}</div>
+                        <div *ngIf="upcomingVisit.medicalEmployeeName != '' "><b>Healthcare professional: </b>{{upcomingVisit.medicalEmployeeName}}</div>
+                        <div *ngIf="upcomingVisit.type != '' "><b>Type: </b>{{upcomingVisit.type}}</div>                                       
+                        <div><b>Date: </b>{{ upcomingVisit.date | date:'dd MMMM yyyy HH:mm':'UTC' }}</div>
+                        <div *ngIf="upcomingVisit.meetingLink != '' || upcomingVisit.isOnline "><b>Meeting link: </b>{{upcomingVisit.meetingLink}}</div>
+                    </div>
+                }
+            </div>
+        </div>
+</div>

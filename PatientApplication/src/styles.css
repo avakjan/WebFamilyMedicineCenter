@@ -1,0 +1,64 @@
+html {
+    display: flex; 
+    justify-content: center;
+    overflow-y: scroll;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #ADBBDA 0%, #EDE8F5 90%);
+    margin: 0px;
+    font-family: 'Manrope';
+    min-height: 100vh;
+}
+.container {
+    font-family: 'Manrope';
+    min-height: 100vh;
+}
+app-header {
+    position: relative;
+    top: 0%;
+}
+select, input, button {
+    width: 20vw;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border: 1px solid #737373;
+    font-size: 17px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-family: 'Manrope';
+}
+input {
+    height: 7vh;
+    transition: 0.3s;
+}
+p {
+    margin: 0;
+}
+h2 {    
+    color: #0d1e3c;
+}
+.ng-invalid.ng-touched {
+  border-color: #ff000087 !important; 
+}
+.error-msg{
+    animation: fadeIn 0.3s;
+    color: #ff000087;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+}
+ 

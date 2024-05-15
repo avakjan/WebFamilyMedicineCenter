@@ -1,0 +1,23 @@
+  <div class="container">
+    <div class="signup-form">
+      <h2>Please enter your information</h2>
+      <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+        <div *ngFor="let field of formFields" class="form-group">
+          <input [id]="field" [type]=" field == 'password' ? 'password' : 'text'" [formControlName]="field" placeholder="{{field}}">
+          <div class="error-msg" *ngIf="patientForm.get(field)?.hasError('required') && patientForm.get(field)?.touched">
+            {{errorMessages.required}}
+          </div>
+          <div class="error-msg"  *ngIf="patientForm.get(field)?.hasError('pattern') && field != 'phoneNumber'">
+            {{errorMessages.numbersAndDigitsOnly}}
+          </div>
+          <div class="error-msg"  *ngIf="patientForm.get(field)?.hasError('pattern') && field == 'phoneNumber'">
+            {{errorMessages.numbersOnly}}
+          </div>
+          <div class="error-msg"  *ngIf="patientForm.get(field)?.hasError('email')">
+            {{errorMessages.email}}
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,103 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container {
+    margin: 20px 10px 0 10px;
+}
+.medicine-center-container, .doctor-container, .nurses-container, .web-mecidicin-center {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1px 20px 20px 20px;
+    margin-bottom: 20px;
+}
+
+.medicine-center-container h2, .doctor-container h2, .nurses-container h2, .web-mecidicin-center h2 {
+    border-bottom: 2px solid #89a9bc;
+    padding-bottom: 10px;
+}
+.doctors-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1px 20px 20px 20px;
+    margin-bottom: 20px;
+}
+
+.doctors-container h2 {
+    border-bottom: 2px solid #89a9bc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.doctors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.doctor {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgb(99 138 154 / 50%);
+    padding: 15px;
+}
+
+.doctor div {
+    margin-bottom: 5px;
+}
+
+.nurses-container div:last-child {
+    margin-bottom: 0;
+}
+.nurses-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.nurses-container h2 {
+    border-bottom: 2px solid #89a9bc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.nurses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; 
+}
+
+.nurse {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgb(99 138 154 / 50%);
+    padding: 15px;
+}
+
+.nurse div {
+    margin-bottom: 5px;
+}
+
+.web-mecidicin-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.web-mecidicin-center li {
+    margin-bottom: 5px;
+}
+
+.web-mecidicin-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.web-mecidicin-center a:hover {
+    text-decoration: underline;
+}
+
+.my-doctor{
+    border: solid black 2px;
+}

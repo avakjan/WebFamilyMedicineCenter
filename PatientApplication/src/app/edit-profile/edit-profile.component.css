@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #ADBBDA 0%, #EDE8F5 90%);
+    margin: 0px;
+  }
+  
+  button {
+    background-color: rgba(0, 0, 0, 0.02);
+    height: 5vh;
+    border: 1px solid #737373;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #7b94d58a;
+    transition: 0.4s;
+    transform: scale(110%);
+  }
+  input {
+    transition: 0.3s;
+  }
+  input:focus-visible {
+    background-color: #ffe4e442;
+    transition: 0.4s;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    height: 100vh;
+  }
+  .form-group {
+    font-family: 'Manrope';
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  }
+  
+  .ng-invalid.ng-touched {
+    border-color: #ff000059 !important; 
+  }
+  
+  .error-msg{
+    animation: fadeIn 0.3s;
+    color: #ff000059;
+  }
+  

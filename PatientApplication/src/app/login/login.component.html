@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    </head>
+        <div class="container">
+            <div class="login-form">
+                <h2>Please enter your credentials to sign in</h2>
+                <input [(ngModel)]="username" placeholder="Username" name="username">
+                <input [(ngModel)]="password" placeholder="Password" name="password" type="password">
+                <button (click)="onLogin()">Log In</button>
+                <button (click)="onSignup()">Sign Up</button>
+                <p *ngIf="message != ''" class="error-msg">{{message}}</p>
+            </div>
+        </div>
+</html>

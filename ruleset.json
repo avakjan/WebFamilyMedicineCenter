@@ -1,0 +1,31 @@
+{
+    "name": "BC",
+    "description" : "Rules",
+    "rules": [
+        {
+            "id" : "AA0072",
+            "action" : "Hidden",
+            "justification" : "Disable unwanted naming warnings"
+        },
+        {
+            "id" : "AA0073",
+            "action" : "Hidden",
+            "justification" : "Disable unwanted naming warnings"
+        },
+        {
+            "id" : "AA0074",
+            "action" : "Hidden",
+            "justification" : "Disable unwanted naming warnings"
+        },
+        {
+            "id" : "AA0470",
+            "action" : "Hidden",
+            "justification" : "Disable unwanted comments suggestions"
+        },
+        {
+            "id" : "AW0009",
+            "action" : "Hidden",
+            "justification" : "Disable unwanted warning that BLOB is depricated"
+        }
+    ]
+}

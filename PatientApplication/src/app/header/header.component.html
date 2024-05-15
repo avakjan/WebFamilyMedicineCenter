@@ -1,0 +1,13 @@
+<div class="navbar-container">
+    <header>
+        <h1  class="menu-item" [routerLink]="['/']">Medicine Center</h1>
+    </header>
+    <nav>
+        <ul>
+            <div class="menu-item" [routerLink]="['/contacts']">Contacts</div>
+            <div class="menu-item" [routerLink]="['/upcoming-visits']">Upcoming visits</div>
+            <div class="menu-item" [routerLink]="['/my-profile']">My profile</div>
+            <div class="menu-item" (click)="userStore.logOut()">Log out</div>
+        </ul>
+    </nav>
+</div>

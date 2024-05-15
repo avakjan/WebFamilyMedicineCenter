@@ -1,0 +1,31 @@
+<div class="container">
+  <app-header></app-header>
+      <div class="signup-form">
+        <h2>Edit profile</h2>
+        <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+          <div *ngFor="let field of formFields" class="form-group">
+            <p style="text-align: left;">{{fieldCaptions.get(field)}}</p>
+            <input [id]="field" [type]=" field == 'password' ? 'password' : 'text'" [formControlName]="field" placeholder="{{field}}">
+            <div class="error-msg" *ngIf="patientForm.get(field)?.hasError('required') && patientForm.get(field)?.touched">
+              {{errorMessages.required}}
+            </div>
+            <div class="error-msg" *ngIf="patientForm.get(field)?.hasError('pattern') && field != 'phoneNumber'">
+              {{errorMessages.numbersAndDigitsOnly}}
+            </div>
+            <div class="error-msg" *ngIf="patientForm.get(field)?.hasError('pattern') && field == 'phoneNumber'">
+              {{errorMessages.numbersOnly}}
+            </div>
+            <div class="error-msg" *ngIf="patientForm.get(field)?.hasError('email')">
+              {{errorMessages.email}}
+            </div>
+          </div>
+        </form>
+      </div>
+      <div>
+        <button type="submit">Apply changes</button>
+        <div class="error-msg" *ngIf="errorMsg != ''">{{errorMsg}}</div>
+      </div>
+</div>
+
+
+  

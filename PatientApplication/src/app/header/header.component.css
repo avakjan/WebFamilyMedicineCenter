@@ -1,0 +1,28 @@
+.menu-item{
+  color: #0d1e3c;
+  cursor: pointer;
+}
+.menu-item:hover{
+  color: #05a0d6;;
+}
+
+nav {
+  width: 50vw;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  color: #0d1e3c;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20vw;
+    position: relative;
+    padding: 10px;
+    border-bottom: white;
+    border-bottom-style: ridge;
+}
+  

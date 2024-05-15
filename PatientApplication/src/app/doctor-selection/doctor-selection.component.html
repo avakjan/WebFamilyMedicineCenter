@@ -1,0 +1,16 @@
+<div class="family-center-info">
+    <h2>Selected family center name: <b>{{ familyCenterName }}</b></h2>
+  </div>
+  <div style="cursor: pointer;" class="doctors-list">
+    <h2>Doctors:</h2>
+    <div class="doctor-card" 
+    *ngFor="let doctor of doctorsList" 
+    [class.selected]="doctor.no === selectedDoctorNo"
+    (click)="selectDoctor(doctor.no)">
+      <div class="doctor-name">Dr. {{ doctor.firstName }} {{ doctor.lastName }}</div>
+      <div class="doctor-description">{{ doctor.description }}</div>
+    </div>
+  </div>
+  
+  <button class="confirm-button" (click)="onSubmit()">Confirm</button>
+  

@@ -1,0 +1,37 @@
+      <div class="home-location-form">
+        <h2>Please enter your home address information</h2>
+        <form [formGroup]="homeLocationForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <select id="country" formControlName="country">
+              <option value="" disabled selected>Choose a country</option>
+              @for (country of countries.countries; track country) {
+                  <option [value]="country">{{country}}</option>
+              }
+            </select>
+            <div class="error-msg" *ngIf="homeLocationForm.get('country')?.hasError('required') && homeLocationForm.get('country')?.touched">
+              {{errorMessages.required}}
+            </div>
+          </div>
+          <div class="form-group">
+            <input id="adminDistrict" type="text" formControlName="adminDistrict" placeholder="Admin district">
+            <div class="error-msg" *ngIf="homeLocationForm.get('adminDistrict')?.hasError('required') && homeLocationForm.get('adminDistrict')?.touched">
+              {{errorMessages.required}}
+            </div>
+            <div class="error-msg" *ngIf="homeLocationForm.get('adminDistrict')?.hasError('pattern')">
+              {{errorMessages.numbersAndDigitsOnly}}
+            </div>
+          </div>
+          <div class="form-group">
+            <input id="homeAddress" type="text" formControlName="homeAddress" placeholder="Home address">
+            <div class="error-msg" *ngIf="homeLocationForm.get('homeAddress')?.hasError('required') && homeLocationForm.get('homeAddress')?.touched">
+              {{errorMessages.required}}
+            </div>
+            <div class="error-msg" *ngIf="homeLocationForm.get('homeAddress')?.hasError('pattern')">
+              {{errorMessages.numbersAndDigitsOnly}}
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+  

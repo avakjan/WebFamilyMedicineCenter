@@ -1,0 +1,45 @@
+<div class="wrapper">
+    <app-header></app-header>
+    <div class="container">
+        <div class="medicine-center-container">
+            <h2>My medicine center</h2>
+            <div><b>Name: </b>{{medicineCenter.name}}</div>
+            <div><b>Description: </b>{{medicineCenter.description}}</div>
+            <div><b>Location: </b>{{medicineCenter.medicineCenterLocation.countryRegion}}, {{medicineCenter.medicineCenterLocation.adminDistrict}}, {{medicineCenter.medicineCenterLocation.address}}</div>
+            <div><b>Phone number: </b>{{medicineCenter.contactPhone}}</div>
+        </div>
+        <div class="doctors-container">
+            <h2>Doctors</h2>
+            <div class="doctors-grid">
+                @for (doctor of doctors; track doctor) {
+                    <div class="doctor" [class.my-doctor]="doctor.no === doctorNo">
+                        <div *ngIf="doctor.firstName != '' || doctor.lastName != '' " ><b>Name: </b>{{doctor.firstName}} {{doctor.lastName}}</div>
+                        <div *ngIf="doctor.email != '' "><b>Email: </b>{{doctor.email}}</div>
+                        <div *ngIf="doctor.phoneNumber != '' " ><b>Phone number: </b>{{doctor.phoneNumber}}</div>
+                        <div *ngIf="doctor.room != '' "><b>Room number: </b>{{doctor.room}}</div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="nurses-container">
+            <h2>Nurses</h2>
+            <div class="nurses-grid">
+                @for (doctor of nurses; track doctor) {
+                    <div class="nurse">
+                        <div *ngIf="doctor.firstName != '' || doctor.lastName != '' " ><b>Name: </b>{{doctor.firstName}} {{doctor.lastName}}</div>
+                        <div *ngIf="doctor.email != '' "><b>Email: </b>{{doctor.email}}</div>
+                        <div *ngIf="doctor.phoneNumber != '' " ><b>Phone number: </b>{{doctor.phoneNumber}}</div>
+                        <div *ngIf="doctor.room != '' "><b>Room number: </b>{{doctor.room}}</div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="web-mecidicin-center">
+            <h2>Web Medicine Center</h2>
+            <ul>
+                <li><b>Email: </b><a href="mailto:info&#64;medicinecenter.com">info&#64;veebiarstikeskus.com</a></li>
+                <li><b>Phone: </b><a href="tel:+123456789">+372 556677889</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

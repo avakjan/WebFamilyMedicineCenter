@@ -1,0 +1,25 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="card">
+    <div class="row">
+      <div class="col-75">
+        <span>{{ user.firstname }} {{ user.lastname }}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-75">
+        <span>{{ user.email }}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-75">
+        <span>{{ user.phoneNumber }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <button [routerLink]="['/edit-profile']">Edit Profile</button>
+  </div>
+</div>
+
+  
