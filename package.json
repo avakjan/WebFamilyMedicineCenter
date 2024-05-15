@@ -7,6 +7,6 @@
     "@angular/cli": "^17.3.7"
   },
   "scripts": {
-    "build": "cmd /c build.bat"
+    "build": "bash build.sh"
   }
 }
