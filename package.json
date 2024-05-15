@@ -5,5 +5,8 @@
   },
   "devDependencies": {
     "@angular/cli": "^17.3.7"
+  },
+  "scripts": {
+    "build": "cmd /c build.bat"
   }
 }
